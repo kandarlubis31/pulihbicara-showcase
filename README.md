@@ -77,22 +77,22 @@ Touch target ≥48px • focus trap semua modal • skip link + ARIA announcer �
 
 ```mermaid
 flowchart TB
- subgraph PWA[" PWA — installable & offline-first"]
- UI["UI Layer<br/>Astro + design system CSS<br/>Dual Mode: Dewasa / Anak "]
- EX["Modul Latihan<br/>bicara • fisik • napas • kuis"]
- SP["Speech Engine<br/>TTS + Speech Recognition"]
- PR["Progress Engine<br/>milestone • streak • spaced repetition"]
- CAM["Media & Haptic<br/>kamera cermin • vibrasi"]
- SW["Service Worker<br/>precache → jalan offline"]
- end
- UI --> EX
- EX --> SP
- EX --> PR
- EX --> CAM
- PR --> LS[("localStorage<br/>data tetap di device")]
- SP --> API[" Web APIs<br/>speechSynthesis · SpeechRecognition<br/>MediaDevices · Vibration"]
- CAM --> API
- SW -.-> UI
+    subgraph PWA[" PWA — installable & offline-first"]
+        UI["UI Layer<br/>Astro + design system CSS<br/>Dual Mode: Dewasa / Anak "]
+        EX["Modul Latihan<br/>bicara • fisik • napas • kuis"]
+        SP["Speech Engine<br/>TTS + Speech Recognition"]
+        PR["Progress Engine<br/>milestone • streak • spaced repetition"]
+        CAM["Media & Haptic<br/>kamera cermin • vibrasi"]
+        SW["Service Worker<br/>precache → jalan offline"]
+    end
+    UI --> EX
+    EX --> SP
+    EX --> PR
+    EX --> CAM
+    PR --> LS[("localStorage<br/>data tetap di device")]
+    SP --> API[" Web APIs<br/>speechSynthesis · SpeechRecognition<br/>MediaDevices · Vibration"]
+    CAM --> API
+    SW -.-> UI
 ```
 
 - **Framework:** Astro + TypeScript, styling via CSS Custom Properties (design system)
