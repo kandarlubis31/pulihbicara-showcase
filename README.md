@@ -1,4 +1,4 @@
-# 🗣️ PulihBicara — Terapi Wicara Pasca-Stroke & Belajar Bicara Anak
+# PulihBicara — Terapi Wicara Pasca-Stroke & Belajar Bicara Anak
 
 <div align="center">
 
@@ -14,20 +14,20 @@
 
 ---
 
-## ❌ Masalahnya
+## Masalahnya
 
 Terapi wicara itu mahal, langka, dan tidak selalu dekat rumah:
 
-- 🏥 Pasien pasca-stroke butuh latihan **rutin setiap hari** — tapi sesi dengan terapis terbatas
-- 👶 Anak dengan keterlambatan bicara butuh media latihan yang **menyenangkan**, bukan kartu kertas membosankan
-- 💸 Aplikasi sejenis umumnya **berbayar**, wajib online, dan **mengirim data pengguna ke server**
-- ♿ Banyak app tidak ramah untuk kondisi pasca-stroke: target sentuh kecil, teks sulit dibaca, navigasi rumit
+- Pasien pasca-stroke butuh latihan **rutin setiap hari** — tapi sesi dengan terapis terbatas
+- Anak dengan keterlambatan bicara butuh media latihan yang **menyenangkan**, bukan kartu kertas membosankan
+- Aplikasi sejenis umumnya **berbayar**, wajib online, dan **mengirim data pengguna ke server**
+- Banyak app tidak ramah untuk kondisi pasca-stroke: target sentuh kecil, teks sulit dibaca, navigasi rumit
 
-## ✅ PulihBicara
+## PulihBicara
 
 Sebuah **PWA (Progressive Web App)** yang berubah jadi alat terapi lengkap di HP atau tablet:
 
-| 🧠 Mode Dewasa — pasca-stroke | 👶 Mode Anak — belajar bicara |
+|  Mode Dewasa — pasca-stroke |  Mode Anak — belajar bicara |
 |---|---|
 | Tema teal yang menenangkan | Tema pink playful, font Nunito |
 | Touch target ≥48px (tremor-friendly) | Kartu warna-warni + TTS |
@@ -48,51 +48,51 @@ Sebuah **PWA (Progressive Web App)** yang berubah jadi alat terapi lengkap di HP
 
 ---
 
-## ✨ Apa yang Bisa Dilakukan
+## Apa yang Bisa Dilakukan
 
-### 🗣️ Latihan Bicara
+### Latihan Bicara
 - **Vokal A-I-U-E-O** dengan ilustrasi posisi mulut, **Huruf A–Z** dengan contoh kata, **Angka 0–9**
 - **Kosakata 11 kategori** (keluarga, makanan, tubuh, dst.) & **kalimat 7 grup** (salam, kebutuhan dasar, tanya-jawab, dst.)
 - **Kartu kustom** — keluarga bisa menambah kata & foto sendiri dengan live preview
-- **🎤 Speech recognition** — pasien mengucapkan kata, aplikasi membandingkan dan menilai
+- **Speech recognition** — pasien mengucapkan kata, aplikasi membandingkan dan menilai
 - **Fullscreen & autoplay** — swipe seperti flashcard
 
-### 💪 Latihan Fisik & Napas
+### Latihan Fisik & Napas
 - **Otot mulut (8), tangan (5), kaki (4), keseimbangan (1)** — timer terstruktur, audio cue, instruksi bertahap
 - **Guided breathing 4-4-4** (tarik → tahan → hembuskan) dengan timer visual
 
-### 🧠 Motivasi & Tracking
+### Motivasi & Tracking
 - Progress harian (target 20 latihan), milestone toast di 5/10/15, reward modal di 20
 - Spaced repetition badge, idle encouragement, **kuis interaktif** (tebak huruf & kata)
-- 🤳 **Cermin kamera** draggable — pasien bisa melihat gerak mulutnya sendiri
+- **Cermin kamera** draggable — pasien bisa melihat gerak mulutnya sendiri
 
-### ♿ Aksesibilitas (diaudit: A- / 88%)
+### Aksesibilitas (diaudit: A- / 88%)
 Touch target ≥48px • focus trap semua modal • skip link + ARIA announcer • font scaling & letter spacing • kontras tinggi + dark mode • reduce motion • dyslexic font (Atkinson Hyperlegible) • screen reader support • haptic feedback di 20+ interaksi
 
 ---
 
-## 🏗️ Arsitektur
+## Arsitektur
 
 **100% client-side. Tidak ada backend, tidak ada database, tidak ada data yang meninggalkan perangkat.**
 
 ```mermaid
 flowchart TB
-    subgraph PWA["📱 PWA — installable & offline-first"]
-        UI["UI Layer<br/>Astro + design system CSS<br/>Dual Mode: Dewasa 🟢 / Anak 🩷"]
-        EX["Modul Latihan<br/>bicara • fisik • napas • kuis"]
-        SP["Speech Engine<br/>TTS + Speech Recognition"]
-        PR["Progress Engine<br/>milestone • streak • spaced repetition"]
-        CAM["Media & Haptic<br/>kamera cermin • vibrasi"]
-        SW["Service Worker<br/>precache → jalan offline"]
-    end
-    UI --> EX
-    EX --> SP
-    EX --> PR
-    EX --> CAM
-    PR --> LS[("localStorage<br/>data tetap di device")]
-    SP --> API["🌐 Web APIs<br/>speechSynthesis · SpeechRecognition<br/>MediaDevices · Vibration"]
-    CAM --> API
-    SW -.-> UI
+ subgraph PWA[" PWA — installable & offline-first"]
+ UI["UI Layer<br/>Astro + design system CSS<br/>Dual Mode: Dewasa / Anak "]
+ EX["Modul Latihan<br/>bicara • fisik • napas • kuis"]
+ SP["Speech Engine<br/>TTS + Speech Recognition"]
+ PR["Progress Engine<br/>milestone • streak • spaced repetition"]
+ CAM["Media & Haptic<br/>kamera cermin • vibrasi"]
+ SW["Service Worker<br/>precache → jalan offline"]
+ end
+ UI --> EX
+ EX --> SP
+ EX --> PR
+ EX --> CAM
+ PR --> LS[("localStorage<br/>data tetap di device")]
+ SP --> API[" Web APIs<br/>speechSynthesis · SpeechRecognition<br/>MediaDevices · Vibration"]
+ CAM --> API
+ SW -.-> UI
 ```
 
 - **Framework:** Astro + TypeScript, styling via CSS Custom Properties (design system)
@@ -102,13 +102,23 @@ flowchart TB
 
 ---
 
-## 🔒 Tentang Source Code
+## English
+
+**PulihBicara** is a speech-therapy app for post-stroke recovery and for children learning to speak. Exercises run directly in the browser, covering speech drills, breathing and physical practice, plus progress tracking.
+
+The interface was audited for accessibility (A- / 88%) so it stays usable for patients with limited motor control.
+
+The source code is not published; this repository documents the product.
+
+---
+
+## Tentang Source Code
 
 Repository ini adalah **showcase** — dokumentasi produk, bukan kode sumber.
 
 Source code PulihBicara **tidak dipublikasikan** dan semua hak dilindungi. Lihat [`LICENSE`](LICENSE).
 
-> 💬 Tertarik untuk demo, kolaborasi, atau lisensi? Hubungi [Kandar Lubis](https://github.com/kandarlubis31).
+> Tertarik untuk demo, kolaborasi, atau lisensi? Hubungi [Kandar Lubis](https://github.com/kandarlubis31).
 
 ---
 
