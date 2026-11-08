@@ -40,9 +40,9 @@ Sebuah **PWA (Progressive Web App)** yang berubah jadi alat terapi lengkap di HP
 
 | Desktop | Mobile |
 |:---:|:---:|
-| ![PulihBicara desktop](screenshots/desktop-vokal.png) | ![PulihBicara mobile](screenshots/mobile-vokal.png) |
+| ![PulihBicara desktop — latihan kosakata](screenshots/desktop-vokal.png) | ![PulihBicara mobile — latihan vokal](screenshots/mobile-vokal.png) |
 
-*Tampilan latihan vokal — installable sebagai app, jalan penuh offline.*
+*Tampilan latihan kosakata di desktop dan latihan vokal di mobile — installable sebagai app, jalan penuh offline.*
 
 </div>
 
