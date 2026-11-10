@@ -40,9 +40,9 @@ Sebuah **PWA (Progressive Web App)** yang berubah jadi alat terapi lengkap di HP
 
 | Desktop | Mobile |
 |:---:|:---:|
-| ![PulihBicara desktop — latihan kosakata](screenshots/desktop-vokal.png) | ![PulihBicara mobile — latihan vokal](screenshots/mobile-vokal.png) |
+| ![PulihBicara desktop — latihan menyusun kalimat](screenshots/desktop-kalimat.png) | ![PulihBicara mobile — mengenal huruf A–Z](screenshots/mobile-huruf.png) |
 
-*Tampilan latihan kosakata di desktop dan latihan vokal di mobile — installable sebagai app, jalan penuh offline.*
+*Latihan menyusun kalimat di desktop dan mengenal huruf di mobile — bisa dipasang sebagai app dan tetap terbuka saat offline.*
 
 </div>
 
@@ -51,7 +51,7 @@ Sebuah **PWA (Progressive Web App)** yang berubah jadi alat terapi lengkap di HP
 ## Apa yang Bisa Dilakukan
 
 ### Latihan Bicara
-- **Vokal A-I-U-E-O** dengan ilustrasi posisi mulut, **Huruf A–Z** dengan contoh kata, **Angka 0–9**
+- **Vokal A-I-U-E-O** dengan ilustrasi posisi mulut, **Huruf A–Z**, **Angka 0–9**
 - **Kosakata 11 kategori** (keluarga, makanan, tubuh, dst.) & **kalimat 7 grup** (salam, kebutuhan dasar, tanya-jawab, dst.)
 - **Kartu kustom** — keluarga bisa menambah kata & foto sendiri dengan live preview
 - **Speech recognition** — pasien mengucapkan kata, aplikasi membandingkan dan menilai
